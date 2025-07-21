@@ -4,6 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
+import css from '@eslint/css';
 import { globalIgnores } from 'eslint/config';
 
 export default tseslint.config([
@@ -22,4 +23,14 @@ export default tseslint.config([
     },
   },
   eslintConfigPrettier,
+  {
+    files: ['**/*.css'],
+    plugins: {
+      css,
+    },
+    language: 'css/css',
+    rules: {
+      ...css.configs.recommended.rules,
+    },
+  },
 ]);
