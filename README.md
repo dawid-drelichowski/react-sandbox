@@ -6,5 +6,4 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 - [ ] ESlint Markdown plugin.
 - [ ] ESLint HTML plugin.
-- [ ] `tsconfig.node.json` and `tsconfig.app.json` should be merged.
 - [ ] ESlint an Prettier commit hooks.
