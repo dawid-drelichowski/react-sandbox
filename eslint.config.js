@@ -5,6 +5,7 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import css from '@eslint/css';
+import html from '@html-eslint/eslint-plugin';
 import { globalIgnores } from 'eslint/config';
 
 export default tseslint.config([
@@ -31,6 +32,20 @@ export default tseslint.config([
     language: 'css/css',
     rules: {
       ...css.configs.recommended.rules,
+    },
+  },
+  {
+    ...html.configs['flat/recommended'],
+    files: ['**/*.html'],
+    rules: {
+      ...html.configs['flat/recommended'].rules,
+      '@html-eslint/indent': 'off',
+      '@html-eslint/attrs-newline': 'off',
+      '@html-eslint/require-closing-tags': ['error', { selfClosing: 'always' }],
+      '@html-eslint/no-extra-spacing-attrs': [
+        'error',
+        { enforceBeforeSelfClose: true },
+      ],
     },
   },
 ]);
