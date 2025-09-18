@@ -1,8 +1,9 @@
 {
   "name": "react-sandbox",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React sandbox",
   "author": "Dawid Drelichowski",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
