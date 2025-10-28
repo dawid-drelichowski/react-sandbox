@@ -3,7 +3,7 @@
 A modern React development environment featuring:
 
 - ⚡️ [Vite](https://vite.dev/) - Next Generation Frontend Tooling
-- ⚛️ [React](https://react.dev/) - The library for web and native user interfaces
+- ⚛️ [React](https://react.dev/) - The library for web and native user interfaces (compiler included)
 - 📝 [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types
 - 🧪 [Vitest](https://vitest.dev/) - Blazing Fast Unit Test Framework
 - 📋 [ESLint](https://eslint.org/) - Pluggable JavaScript linter

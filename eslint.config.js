@@ -7,7 +7,7 @@ import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import css from '@eslint/css';
 import html from '@html-eslint/eslint-plugin';
 import json from '@eslint/json';
-import markdown from "@eslint/markdown";
+import markdown from '@eslint/markdown';
 
 import { globalIgnores } from 'eslint/config';
 
@@ -18,7 +18,7 @@ export default tseslint.config([
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,
-      reactHooks.configs['recommended-latest'],
+      reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
     ],
     languageOptions: {
@@ -63,7 +63,7 @@ export default tseslint.config([
     },
   },
   {
-    files: ["**/tsconfig.json"],
+    files: ['**/tsconfig.json'],
     plugins: {
       json,
     },
@@ -73,13 +73,13 @@ export default tseslint.config([
     },
   },
   {
-    files: ["**/*.md"],
+    files: ['**/*.md'],
     plugins: {
-        markdown
+      markdown,
     },
-    language: "markdown/gfm",
+    language: 'markdown/gfm',
     rules: {
       ...markdown.configs.recommended.rules,
     },
-  }
+  },
 ]);
